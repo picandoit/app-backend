@@ -22,6 +22,8 @@ public class KahootclApplication {
 		System.setProperty("SHOW_SQL", dotenv.get("SHOW_SQL"));
 
 		System.out.println("Hello");
+		System.out.println("Hellooo");
+		System.out.println("Hellooo");
 		SpringApplication.run(KahootclApplication.class, args);
 	}
 
