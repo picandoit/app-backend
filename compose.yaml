@@ -1,9 +1,0 @@
-services:
-  postgres:
-    image: 'postgres:latest'
-    environment:
-      - 'POSTGRES_DB=kahoot-db'
-      - 'POSTGRES_PASSWORD=emrah123'
-      - 'POSTGRES_USER=postgres.wdtlgkqggwmhicevhlek'
-    ports:
-      - '6543:5432'

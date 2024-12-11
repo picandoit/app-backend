@@ -1,10 +1,17 @@
 
+FROM openjdk:17-jdk-alpine AS build
 
-FROM openjdk:17-jdk-slim
+
+RUN apk add --no-cache maven
+
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
 
-ARG JAR_FILE=target/*.jar
+FROM openjdk:17-jdk-alpine
+COPY --from=build /app/target/*.jar app.jar
 
-COPY ${JAR_FILE} app.jar
+EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-Dserver.address=0.0.0.0", "-jar", "/app.jar"]
