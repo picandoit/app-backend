@@ -20,10 +20,7 @@ public class KahootclApplication {
 		System.setProperty("HIBERNATE_DDL_AUTO", dotenv.get("HIBERNATE_DDL_AUTO"));
 		System.setProperty("HIBERNATE_DIALECT", dotenv.get("HIBERNATE_DIALECT"));
 		System.setProperty("SHOW_SQL", dotenv.get("SHOW_SQL"));
-
-		System.out.println("Hello");
-		System.out.println("Hellooo");
-		System.out.println("Hellooo");
+		
 		SpringApplication.run(KahootclApplication.class, args);
 	}
 
