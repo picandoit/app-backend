@@ -24,8 +24,11 @@ public class QuizServiceImpl implements QuizService {
         return quizRepository.save(quiz);
     }
 
+    @Transactional
     @Override
     public Quiz getQuizById(long id) {
         return quizRepository.findById(id).orElseThrow(()-> new ApiException("Quiz not found with ID: " + id, HttpStatus.NOT_FOUND));
     }
+
+    //TODO: create dto and change the return types.
 }
