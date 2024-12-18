@@ -2,6 +2,7 @@ package com.example.kahootcl.Service;
 
 import com.example.kahootcl.entity.Quiz;
 import com.example.kahootcl.repository.QuizRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class QuizServiceImpl implements QuizService {
         this.quizRepository = quizRepository;
     }
 
+    @Transactional
     @Override
     public Quiz save(Quiz quiz) {
         return quizRepository.save(quiz);

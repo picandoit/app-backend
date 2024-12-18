@@ -32,7 +32,7 @@ public class Profile {
     private Register register;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "profile_kahoot" , joinColumns = @JoinColumn(name = "profile_id") , inverseJoinColumns = @JoinColumn(name = "kahoot_id"))
+    @JoinTable(name = "profile_kahoot" , joinColumns = @JoinColumn(name = "profile_id") , inverseJoinColumns = @JoinColumn(name = "kahoot_id"),schema = "extensions")
     private List<Kahoot> kahoots;
 
 

@@ -25,7 +25,7 @@ public class Quiz {
     private String title;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "quiz_answer", joinColumns = @JoinColumn(name = "quiz_id"), inverseJoinColumns = @JoinColumn(name = "answer_id"))
+    @JoinTable(name = "quiz_answer", joinColumns = @JoinColumn(name = "quiz_id"), inverseJoinColumns = @JoinColumn(name = "answer_id"),schema = "extensions")
     private Set<Answer> answers;
 
     @ManyToMany(cascade ={CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH} , mappedBy = "quizzes")

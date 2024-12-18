@@ -25,7 +25,7 @@ public class Kahoot {
 
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "kahoot_quiz", joinColumns = @JoinColumn(name = "kahoot_id"), inverseJoinColumns = @JoinColumn(name = "quiz_id"))
+    @JoinTable(name = "kahoot_quiz", joinColumns = @JoinColumn(name = "kahoot_id"), inverseJoinColumns = @JoinColumn(name = "quiz_id"),schema = "extensions")
     private List<Quiz> quizzes;
 
 
