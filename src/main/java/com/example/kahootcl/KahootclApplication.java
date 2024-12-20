@@ -12,6 +12,9 @@ public class KahootclApplication {
 
 	public static void main(String[] args) {
 
+
+
+
 		// Load the .env file
 		Dotenv dotenv = Dotenv.load();
 
